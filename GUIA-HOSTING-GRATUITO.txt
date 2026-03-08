@@ -1,0 +1,252 @@
+╔══════════════════════════════════════════════════════════════════╗
+║     🌐 GUÍA: PUBLICAR EN INTERNET GRATIS - LA MORENA v2.0      ║
+║     Sin tarjeta de crédito · Sin costo mensual · 100% Online   ║
+╚══════════════════════════════════════════════════════════════════╝
+
+Tienes 3 opciones excelentes y gratuitas. Te recomendamos en este orden:
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🥇 OPCIÓN 1: GITHUB PAGES (MÁS RECOMENDADA)
+   ✅ 100% Gratis para siempre
+   ✅ URL profesional: tu-usuario.github.io/la-morena
+   ✅ HTTPS automático (seguro)
+   ✅ Actualizar es muy fácil
+   ✅ No vence ni expira
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PASO 1 — Crear cuenta en GitHub
+────────────────────────────────
+1. Abre tu navegador y ve a:  https://github.com
+2. Haz clic en "Sign up" (esquina superior derecha)
+3. Ingresa:
+   • Username (nombre de usuario): elige algo como "lamorena-pedidos"
+   • Email: tu correo real
+   • Password: una contraseña segura
+4. Verifica tu correo (GitHub te envía un código)
+5. En la pantalla de plan, elige "Continue for free" ← MUY IMPORTANTE
+6. ¡Listo! Ya tienes cuenta gratis.
+
+
+PASO 2 — Crear un repositorio (carpeta en la nube)
+───────────────────────────────────────────────────
+1. Una vez dentro de GitHub, haz clic en el botón verde "New" 
+   (o ve a: https://github.com/new)
+2. En "Repository name" escribe exactamente:  la-morena
+3. Asegúrate que esté marcado "Public" (público) ← OBLIGATORIO
+4. NO marques ninguna casilla adicional
+5. Haz clic en "Create repository" (botón verde abajo)
+
+
+PASO 3 — Subir los archivos del sistema
+────────────────────────────────────────
+1. En la página del repositorio que se abre, haz clic en:
+   "uploading an existing file" (es un enlace pequeño en el medio)
+   
+   O busca el botón "Add file" → "Upload files"
+
+2. Se abrirá una zona para arrastrar archivos.
+   Arrastra TODOS estos archivos a la vez (los 12):
+   
+   📄 almuerzo-pedidos.html
+   🖼️ logo-la-morena.png
+   🖼️ food1.png
+   🖼️ food2.png
+   🖼️ food3.png
+   🖼️ food4.png
+   🖼️ food5.png
+   🖼️ food6.png
+   🖼️ qr-altoke.png
+   📄 google-apps-script.js
+   📄 INSTRUCCIONES.txt
+   📄 INSTRUCCIONES-INSTALACION.txt
+
+3. Espera que carguen todos (verás una barra de progreso)
+
+4. Baja hasta el final de la página donde dice "Commit changes"
+
+5. En el cuadro de texto escribe:  Subida inicial del sistema
+   (es solo un comentario, escribe lo que quieras)
+
+6. Haz clic en el botón verde "Commit changes"
+
+7. Espera unos segundos... ¡Los archivos ya están en la nube!
+
+
+PASO 4 — Activar GitHub Pages (publicar el sitio)
+──────────────────────────────────────────────────
+1. En la página del repositorio, haz clic en "Settings"
+   (ícono de engranaje ⚙️, en la barra superior del repo)
+
+2. En el menú izquierdo, busca y haz clic en "Pages"
+   (está en la sección "Code and automation")
+
+3. En la sección "Branch", donde dice "None", 
+   haz clic en el menú desplegable y elige "main"
+
+4. Deja "/root" seleccionado (no lo cambies)
+
+5. Haz clic en "Save"
+
+6. Aparecerá un mensaje azul/verde que dice algo como:
+   "Your site is being published..."
+   
+7. Espera 2-3 minutos y recarga la página.
+
+8. Aparecerá un mensaje verde con tu URL:
+   ✅ "Your site is published at:"
+   🌐 https://TU-USUARIO.github.io/la-morena/almuerzo-pedidos.html
+
+
+PASO 5 — Compartir con tus usuarios
+─────────────────────────────────────
+Tu URL final será algo como:
+   https://lamorena-pedidos.github.io/la-morena/almuerzo-pedidos.html
+
+¡Comparte ese enlace por WhatsApp con tu equipo!
+
+⚠️ RECUERDA: Después de que el Admin configure el menú,
+debe copiar el "Enlace del Menú" que genera el sistema y
+compartir ESE ENLACE (no la URL directa) para que los
+usuarios vean el menú actualizado.
+
+
+PASO 6 — Actualizar archivos cuando hagas cambios
+──────────────────────────────────────────────────
+Si en el futuro recibes una versión actualizada del sistema:
+
+1. Ve a tu repositorio en github.com
+2. Haz clic en el archivo que quieres actualizar (ej: almuerzo-pedidos.html)
+3. Haz clic en el ícono del lápiz ✏️ (Edit this file)
+4. O usa "Add file" → "Upload files" para reemplazarlo
+5. Haz clic en "Commit changes"
+6. En 1-2 minutos el sitio se actualiza automáticamente
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🥈 OPCIÓN 2: NETLIFY DROP (MÁS RÁPIDA - 2 minutos)
+   ✅ Sin registro necesario (aunque recomendamos crear cuenta)
+   ✅ URL automática: nombre-random.netlify.app
+   ✅ HTTPS automático
+   ⚠️ Sin cuenta, el sitio expira después de 24 horas
+   ✅ Con cuenta gratis: permanente
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+MÉTODO SIN CUENTA (temporal - solo para probar):
+─────────────────────────────────────────────────
+1. Ve a:  https://app.netlify.com/drop
+2. Abre la carpeta "sistema-la-morena" en tu computadora
+3. Selecciona TODOS los archivos dentro de la carpeta
+4. Arrástralos a la página de Netlify (la zona punteada)
+5. Espera 30 segundos...
+6. ¡Tu sitio está en línea! Te da una URL como:
+   https://amazing-tesla-123.netlify.app
+
+MÉTODO CON CUENTA (permanente y recomendado):
+──────────────────────────────────────────────
+1. Ve a:  https://netlify.com
+2. Clic en "Sign up" → elige "Sign up with GitHub" 
+   (usa la cuenta de GitHub que creaste antes)
+3. Autoriza el acceso
+4. Ve a:  https://app.netlify.com/drop
+5. Arrastra los archivos como se explica arriba
+6. Una vez publicado, el sitio es permanente
+7. Puedes personalizar el nombre:
+   Site settings → General → Site name → Change site name
+   Elige algo como: lamorena-pedidos
+   Tu URL será: https://lamorena-pedidos.netlify.app
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🥉 OPCIÓN 3: GOOGLE DRIVE (Solo para uso interno/privado)
+   ✅ Gratis con cuenta de Google
+   ⚠️ Las imágenes pueden no cargar correctamente
+   ⚠️ No apta para uso con muchos usuarios
+   ⚠️ No recomendada para producción
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Solo úsala para pruebas internas. Para producción usa GitHub Pages.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🔑 SOLUCIÓN DEFINITIVA: CONECTAR GOOGLE SHEETS (RECOMENDADO)
+   ✅ El menú se guarda en la NUBE (Google Sheets)
+   ✅ Todos los dispositivos ven el mismo menú automáticamente
+   ✅ Sin necesidad de compartir enlace cada vez
+   ✅ Los pedidos también se guardan en la nube
+   ✅ Todo 100% GRATIS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Esta es la solución más robusta. Lee el archivo INSTRUCCIONES.txt
+para configurarla. Una vez conectado Google Sheets:
+
+✅ El admin guarda el menú → aparece en todos los celulares
+✅ Los pedidos se guardan en la nube automáticamente
+✅ No hay que compartir ningún enlace especial
+✅ Funciona desde cualquier dispositivo del mundo
+
+Combina: GitHub Pages (para el sitio) + Google Sheets (para los datos)
+= Sistema 100% en la nube, gratis y profesional.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📱 FLUJO RECOMENDADO PARA USO DIARIO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SIN Google Sheets (opción básica):
+1. Admin entra al sistema → Administrar Menú → Guarda el menú
+2. Copia el "Enlace del Menú" que aparece automáticamente
+3. Pega el enlace en el grupo de WhatsApp de la empresa
+4. Los empleados hacen clic en el enlace y hacen su pedido
+5. Admin ve los pedidos en "Ver Pedidos"
+
+CON Google Sheets (opción avanzada - recomendada):
+1. Admin entra al sistema → Administrar Menú → Guarda el menú
+2. Todos los usuarios ya ven el menú sin hacer nada extra
+3. Los pedidos se registran automáticamente en Google Sheets
+4. Admin exporta reporte cuando necesite
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+❓ PREGUNTAS FRECUENTES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+¿Necesito pagar algo?
+→ NO. GitHub Pages es completamente gratis para siempre.
+  Netlify también tiene plan gratuito permanente.
+
+¿Necesito una tarjeta de crédito?
+→ NO. Ninguna de las dos plataformas la requiere para el plan gratuito.
+
+¿El sitio se borra después de un tiempo?
+→ No si usas GitHub Pages o Netlify con cuenta creada.
+  Permanecen activos indefinidamente mientras uses la cuenta.
+
+¿Cuántos usuarios pueden usarlo al mismo tiempo?
+→ Cientos. GitHub Pages y Netlify están hechos para escala.
+
+¿Funciona en celulares?
+→ Sí, el sistema es responsive y funciona perfectamente en móviles.
+
+¿Puedo usar mi propio dominio (ej: pedidos.lamorena.com)?
+→ Sí, ambas plataformas permiten dominios personalizados gratis.
+  Pero necesitarías comprar el dominio (ej: en Namecheap desde $1/año).
+
+¿Qué pasa si me olvido la contraseña de GitHub?
+→ Puedes recuperarla por email desde: https://github.com/password_reset
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🎯 RESUMEN: ¿QUÉ HACER AHORA?
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PASO 1: Crea cuenta en GitHub (gratis) → https://github.com
+PASO 2: Crea repositorio "la-morena" (público)
+PASO 3: Sube los 12 archivos
+PASO 4: Activa GitHub Pages en Settings → Pages → Branch: main
+PASO 5: Copia tu URL y compártela con el equipo
+PASO 6 (opcional pero recomendado): Configura Google Sheets
+         siguiendo las instrucciones en INSTRUCCIONES.txt
+
+¡Eso es todo! Tu sistema estará en línea en menos de 15 minutos.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🍽️  ¡Éxito con tu Sistema de Pedidos La Morena!
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

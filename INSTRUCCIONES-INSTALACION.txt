@@ -1,0 +1,196 @@
+# 📋 INSTRUCCIONES DE INSTALACIÓN Y USO
+## Sistema de Pedidos La Morena - Versión 2.0 (Actualizada)
+
+---
+
+## 📦 ARCHIVOS INCLUIDOS
+
+Debes tener estos 12 archivos en total:
+
+### Archivos del Sistema:
+1. ✅ `almuerzo-pedidos.html`     - Página principal del sistema
+2. ✅ `google-apps-script.js`     - Código para Google Sheets (actualizado v2.0)
+3. ✅ `INSTRUCCIONES-INSTALACION.txt` - Este archivo
+4. ✅ `INSTRUCCIONES.txt`         - Guía completa de configuración Google Sheets
+
+### Imágenes del Carrusel:
+5. ✅ `food1.png` - Imagen de comida 1
+6. ✅ `food2.png` - Imagen de comida 2
+7. ✅ `food3.png` - Imagen de comida 3
+8. ✅ `food4.png` - Imagen de comida 4
+9. ✅ `food5.png` - Imagen de comida 5
+10. ✅ `food6.png` - Imagen de comida 6
+
+### Logo y QR:
+11. ✅ `logo-la-morena.png` - Logo de la empresa
+12. ✅ `qr-altoke.png`      - QR de Altoke para pagos
+
+---
+
+## 🆕 NOVEDADES EN VERSIÓN 2.0
+
+### 1. ✅ Opción 3 de Pedido (Solo Sopa)
+- Nueva tarjeta "🥡 Opción 3" en la pantalla de pedido
+- Permite pedir **únicamente la sopa del día** sin segundo
+- Precio configurable desde el panel de administrador (campo nuevo: "Precio Opción 3")
+- Se registra como "Opción 3 - Solo Sopa" en el historial de pedidos
+
+### 2. ✅ QR de Pago generado al confirmar
+- Cuando el cliente selecciona **"Pago por QR"** y confirma:
+  - Aparece el **QR de Altoke** para escanear y pagar
+  - Aparece el **QR con detalles** del pedido para mostrar al recoger
+- Cuando selecciona **"Efectivo"**, solo aparece el QR del pedido
+
+### 3. ✅ Modal de Confirmación de Pedido
+- Al hacer click en "Confirmar Pedido", aparece una pantalla animada con 🎉
+- Muestra un resumen completo: nombre, día, hora, tipo de menú, pedido y total
+- El cliente debe cerrar esta pantalla para ver el QR completo
+
+### 4. ✅ Exportar PDF y Excel (separados)
+- Dos botones independientes en "Ver Pedidos":
+  - **📊 Excel** → descarga archivo .csv compatible con Microsoft Excel
+  - **📄 PDF**   → abre una nueva ventana con tabla lista para imprimir/guardar como PDF
+- Ambos incluyen todos los tipos de menú (incluida la Opción 3)
+
+### 5. ✅ Fondo animado del Header (completamente rediseñado)
+- Las imágenes de comida ahora cubren **TODO el fondo** del header
+- Se muestran **2 imágenes a la vez** (una en cada mitad)
+- Cambian automáticamente cada **5 segundos** con transición suave
+- El **logo de La Morena** y el **texto** están fijos y NO se mueven
+- Ciclo de imágenes:
+  - Turno 1: food1 + food2
+  - Turno 2: food3 + food4
+  - Turno 3: food5 + food6
+  - (vuelve al inicio)
+
+---
+
+## 🚀 PASOS DE INSTALACIÓN
+
+### OPCIÓN A: Probar Localmente (Más Rápido)
+
+1. **Crea una carpeta** en tu computadora llamada "Sistema-Pedidos-La-Morena"
+
+2. **Copia TODOS los archivos** a esa carpeta (los 12 archivos)
+
+3. **Abre el archivo HTML**:
+   - Haz doble clic en `almuerzo-pedidos.html`
+   - Se abrirá en tu navegador
+
+4. **¡Listo para probar!**
+   - Funciona con datos locales (localStorage)
+   - Para conectar Google Sheets, sigue los pasos en `INSTRUCCIONES.txt`
+
+---
+
+### OPCIÓN B: Publicar en Internet (Recomendado)
+
+#### MÉTODO 1: Netlify Drop (MÁS FÁCIL - 2 minutos)
+
+1. Ve a https://app.netlify.com/drop
+2. Arrastra la **carpeta completa** con todos los archivos
+3. ¡Listo! Te dará una URL como: `https://random-name.netlify.app`
+
+#### MÉTODO 2: GitHub Pages (Más profesional)
+
+1. Crea cuenta en https://github.com (gratis)
+2. Crea un nuevo repositorio público
+3. Sube los 12 archivos
+4. Ve a Settings → Pages → selecciona rama "main" → Save
+5. En 2-3 minutos tendrás tu sitio en:
+   `https://tu-usuario.github.io/nombre-repo/almuerzo-pedidos.html`
+
+---
+
+## 🔑 CONFIGURAR USUARIO Y CONTRASEÑA ADMIN
+
+Por defecto:
+- **Usuario**: `admin`
+- **Contraseña**: `lamorena2025`
+
+Para cambiar, abre `almuerzo-pedidos.html` en un editor de texto y busca:
+```javascript
+const ADMIN_USER = 'admin';
+const ADMIN_PASSWORD = 'lamorena2025';
+```
+Reemplaza con tus credenciales y guarda.
+
+---
+
+## 📱 CÓMO USAR EL SISTEMA
+
+### Para Clientes:
+1. Abrir el link del sistema
+2. Seleccionar el día
+3. Ver el menú y elegir tipo:
+   - 🍲 **Menú Completo** = Sopa + Segundo
+   - 🍖 **Solo Segundo** = Solo el segundo
+   - 🥡 **Opción 3** = Solo la sopa del día (NUEVO)
+4. Llenar nombre y hora de llegada
+5. Seleccionar método de pago (QR o Efectivo)
+6. Confirmar y ver el modal de confirmación 🎉
+7. Si pagó por QR: escanear el QR de Altoke para pagar
+8. Guardar el QR del pedido para presentar al recoger
+
+### Para Administradores:
+1. Click en "🔐 Admin" (arriba a la derecha)
+2. Ingresar usuario y contraseña
+3. **Administrar Menú**: configurar menús con los 3 precios (Completo, Segundo, Opción 3)
+4. **Ver Pedidos**: ver historial, filtrar por día/tipo
+5. **Exportar**: botones separados para Excel y PDF
+6. Cerrar sesión cuando termines
+
+---
+
+## 🗄️ ESTRUCTURA EN GOOGLE SHEETS (v2.0)
+
+### Hoja "Menus":
+| Día | Sopa | Segundo 1 | Segundo 2 | Saludable | Precio Completo | Precio Segundo | **Precio Opción 3** | Última Actualización |
+
+### Hoja "Pedidos":
+| ID | Nombre | Día | Hora | Tipo Menú | Sopa | Pedido | Método Pago | Precio (Bs) | Fecha Registro |
+
+> ⚠️ Si ya tenías datos en Google Sheets de la versión anterior, las columnas nuevas se agregarán automáticamente la próxima vez que guardes un menú.
+
+---
+
+## 🎨 RESUMEN DEL CARRUSEL DE FONDO
+
+- **2 imágenes simultáneas** cubren todo el ancho del header
+- **Cambia cada 5 segundos** automáticamente
+- **Transición suave** de 1.5 segundos entre cambios
+- El **logo y el texto** son estáticos (no se mueven nunca)
+
+---
+
+## ⚠️ SOLUCIÓN DE PROBLEMAS
+
+**Las imágenes no se ven**
+→ Asegúrate de que TODOS los archivos estén en la misma carpeta con nombres exactos
+
+**El carrusel no funciona**
+→ Abre la consola del navegador (F12) y revisa errores de rutas
+
+**El QR de Altoke no aparece**
+→ Verifica que `qr-altoke.png` esté en la carpeta y que hayas seleccionado "Pago por QR"
+
+**No puedo entrar como admin**
+→ Usuario: `admin` / Contraseña: `lamorena2025` (distingue mayúsculas)
+
+**El PDF sale en blanco**
+→ Asegúrate de tener pedidos registrados antes de exportar
+
+**La Opción 3 no tiene precio configurado**
+→ Ve a Admin → Administrar Menú → llena el campo "Precio Opción 3"
+
+---
+
+## 🎉 ¡LISTO!
+
+Tu sistema v2.0 está completo. Solo necesitas:
+1. ✅ Subir los archivos a internet (o probar local)
+2. ✅ Cambiar usuario y contraseña admin (opcional)
+3. ✅ Configurar Google Sheets con el nuevo script (opcional)
+4. ✅ Compartir el link con tu equipo
+
+**¡Disfruta tu sistema de pedidos actualizado! 🍽️**

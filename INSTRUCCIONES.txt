@@ -1,0 +1,167 @@
+# 📋 INSTRUCCIONES PARA CONFIGURAR EL SISTEMA CON GOOGLE SHEETS
+## Versión 2.0 - Sistema de Pedidos La Morena
+
+---
+
+## ✅ CARACTERÍSTICAS DEL SISTEMA v2.0
+
+### Para Usuarios (Sin Login):
+- Ver menú semanal
+- Hacer pedidos eligiendo entre:
+  - 🍲 Menú Completo (Sopa + Segundo)
+  - 🍖 Solo Segundo
+  - 🥡 Opción 3 - Solo Sopa (NUEVO)
+- Seleccionar método de pago: QR o Efectivo en Caja
+- Ver modal de confirmación animado al confirmar (NUEVO)
+- Generar código QR con todos los detalles del pedido
+- Ver QR de Altoke para pago electrónico (si aplica) (NUEVO)
+
+### Para Administradores (Con Login):
+- **Usuario**: `admin`
+- **Contraseña**: `lamorena2025`
+- Configurar menús semanales con **3 precios** (Completo, Segundo, Opción 3)
+- Ver todos los pedidos registrados con los 3 tipos de menú
+- Filtrar pedidos por día y tipo
+- Ver estadísticas y resumen de ingresos
+- Exportar pedidos a **Excel (.csv)** o **PDF** (NUEVO - botones separados)
+
+---
+
+## 📝 PASO 1: CREAR LA HOJA DE CÁLCULO
+
+1. Ve a https://sheets.google.com
+2. Crea una nueva hoja de cálculo
+3. Nómbrala: "Sistema Pedidos La Morena v2"
+4. Copia el ID de la hoja de cálculo (está en la URL):
+   ```
+   https://docs.google.com/spreadsheets/d/ESTE_ES_EL_ID/edit
+   ```
+
+---
+
+## 📝 PASO 2: CONFIGURAR GOOGLE APPS SCRIPT
+
+1. En tu hoja de cálculo, ve a **Extensiones → Apps Script**
+2. **Borra todo** el código que aparece por defecto
+3. **Copia y pega** todo el contenido del archivo `google-apps-script.js` (v2.0)
+4. En la línea 8, reemplaza `TU_SPREADSHEET_ID_AQUI` con tu ID real:
+   ```javascript
+   const SPREADSHEET_ID = '1a2b3c4d5e6f'; // Tu ID aquí
+   ```
+5. Haz clic en **"Guardar proyecto"** (💾)
+6. Ponle un nombre: "API Pedidos La Morena v2"
+
+> ⚠️ Si ya tenías una versión anterior del script, debes reemplazarlo completamente
+> con el nuevo `google-apps-script.js` de esta versión para que funcione la Opción 3.
+
+---
+
+## 📝 PASO 3: IMPLEMENTAR COMO WEB APP
+
+1. Click en **"Implementar"** → **"Nueva implementación"**
+2. Click en el icono de engranaje ⚙️ → selecciona **"Aplicación web"**
+3. Configura:
+   - **Ejecutar como**: "Yo" (tu cuenta)
+   - **Quién tiene acceso**: "Cualquier persona" ⚠️ IMPORTANTE
+4. Click en **"Implementar"** y autoriza el acceso
+5. Copia la **URL de implementación**:
+   ```
+   https://script.google.com/macros/s/AKfycbx.../exec
+   ```
+
+---
+
+## 📝 PASO 4: CONFIGURAR EL ARCHIVO HTML
+
+1. Abre `almuerzo-pedidos.html` en un editor de texto
+2. Busca:
+   ```javascript
+   const GOOGLE_SCRIPT_URL = 'TU_URL_DE_GOOGLE_APPS_SCRIPT_AQUI';
+   ```
+3. Reemplaza con tu URL:
+   ```javascript
+   const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx.../exec';
+   ```
+4. Busca:
+   ```javascript
+   let useGoogleSheets = false;
+   ```
+5. Cambia a:
+   ```javascript
+   let useGoogleSheets = true;
+   ```
+6. Guarda el archivo
+
+---
+
+## 📝 PASO 5: PUBLICAR EL SITIO WEB
+
+### OPCIÓN A: Netlify Drop (Más fácil)
+1. Ve a https://app.netlify.com/drop
+2. Arrastra la carpeta completa con todos los archivos
+3. ¡Listo! Tendrás una URL instantánea
+
+### OPCIÓN B: GitHub Pages
+1. Crea repositorio público en https://github.com
+2. Sube todos los archivos
+3. Ve a Settings → Pages → selecciona rama main
+4. Tu sitio estará en: `https://tu-usuario.github.io/nombre-repo/almuerzo-pedidos.html`
+
+---
+
+## 📝 PASO 6: PROBAR EL SISTEMA
+
+1. Abre tu sitio web
+2. Login como admin → **Administrar Menú**
+3. Configura un menú de prueba (incluye precio de Opción 3)
+4. Ve a Google Sheets → verifica hoja "Menus" con la nueva columna "Precio Opción 3"
+5. Realiza un pedido de prueba de cada tipo (Completo, Segundo, Opción 3)
+6. Verifica en Google Sheets → hoja "Pedidos"
+7. Prueba exportar PDF y Excel desde "Ver Pedidos"
+
+---
+
+## 🗄️ ESTRUCTURA DE LAS HOJAS EN GOOGLE SHEETS v2.0
+
+### Hoja "Menus" (9 columnas):
+| Día | Sopa | Segundo 1 | Segundo 2 | Saludable | Precio Completo | Precio Segundo | **Precio Opción 3** | Última Actualización |
+
+### Hoja "Pedidos" (10 columnas):
+| ID | Nombre | Día | Hora | Tipo Menú | Sopa | Pedido | Método Pago | Precio (Bs) | Fecha Registro |
+
+> El campo "Tipo Menú" ahora puede tener 3 valores:
+> - "Menú Completo"
+> - "Solo Segundo"  
+> - "Opción 3 - Solo Sopa" ← NUEVO
+
+---
+
+## 🔧 MIGRACIÓN DESDE VERSIÓN ANTERIOR
+
+Si ya tenías el sistema anterior funcionando:
+
+1. **No borres** tu hoja de Google Sheets actual
+2. **Reemplaza** el script de Apps Script con el nuevo `google-apps-script.js`
+3. **Re-implementa** como nueva versión (Implementar → Administrar implementaciones → Nueva versión)
+4. **Copia la nueva URL** de implementación y actualiza el HTML
+5. Los datos anteriores se conservarán; la columna "Precio Opción 3" se agrega automáticamente al guardar el próximo menú
+
+---
+
+## ⚠️ SOLUCIÓN DE PROBLEMAS
+
+**Los datos no se guardan en Google Sheets**
+→ Verifica que la URL del script sea correcta y que `useGoogleSheets = true`
+
+**La Opción 3 no aparece en Google Sheets**
+→ Asegúrate de usar el nuevo `google-apps-script.js` v2.0
+
+**Error de permisos**
+→ En la implementación, verifica que hayas seleccionado "Cualquier persona"
+
+**El PDF no se abre**
+→ Algunos navegadores bloquean ventanas emergentes; permite pop-ups para el sitio
+
+---
+
+¡Listo! Tu sistema v2.0 está configurado. 🎉
